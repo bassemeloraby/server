@@ -59,3 +59,15 @@ create account
 create .gitignore file
 
 node_modules
+
+======================================
+
+video 4: cors
+-------------------------------------------
+https://www.npmjs.com/package/cors
+
+npm i cors
+
+const cors = require('cors')
+
+app.use(cors())
