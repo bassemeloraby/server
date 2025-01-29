@@ -71,3 +71,37 @@ npm i cors
 const cors = require('cors')
 
 app.use(cors())
+======================================
+
+video 5: convert CommonJS module to an ES module
+-------------------------------------------
+>package.json
+"type": "module",
+
+>index.js
+import express from 'express';
+import cors from 'cors';
+
+
+======================================
+
+video 6: routes
+-------------------------------------------
+-create folder for routes
+-create file for product routes (productRoutes.js)
+-
+import express from 'express';
+const router = express.Router();
+
+// Search route should be before :id route to avoid conflict
+
+router.get('/search', (req, res) => {
+  res.send("Search product")
+});
+
+export {
+  searchProducts,
+}; 
+
+> index.js
+import productRoutes from './routes/productRoutes.js';
