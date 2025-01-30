@@ -82,26 +82,54 @@ video 5: convert CommonJS module to an ES module
 import express from 'express';
 import cors from 'cors';
 
-
 ======================================
 
-video 6: routes
+video 6: controllers and routes
 -------------------------------------------
+
+-create folder for controllers
+-create file for product controllers (productController.js)
+
 -create folder for routes
 -create file for product routes (productRoutes.js)
--
+-------------------
+>> productController.js
+const createProduct = (req, res) => {
+  res.send("create product")
+}
+export {
+  createProduct,
+}; 
+---------------------
+>> productRoutes.js
+
 import express from 'express';
+
+
+import {
+  createProduct,
+} from '../controllers/productController.js';
+
 const router = express.Router();
 
-// Search route should be before :id route to avoid conflict
+router.route('/').post(createProduct);
 
-router.get('/search', (req, res) => {
-  res.send("Search product")
-});
+export default router;
+---------------
 
-export {
-  searchProducts,
-}; 
+>> index.js
 
-> index.js
 import productRoutes from './routes/productRoutes.js';
+
+
+// Routes
+app.use('/api/products', productRoutes);
+
+========================================
+video 7 : postman
+-------------------
+-create acount postman 
+https://www.postman.com/
+
+
+http://localhost:3000/api/products
