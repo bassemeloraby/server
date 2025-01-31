@@ -1,5 +1,5 @@
 const createProduct = (req, res) => {
-  res.send("create product");
+  res.status(200).json({ tradeName: "hair shampoo", price: 20 });
 };
 
-export { createProduct }; 
+export { createProduct };

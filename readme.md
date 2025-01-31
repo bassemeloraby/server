@@ -133,3 +133,15 @@ https://www.postman.com/
 
 
 http://localhost:3000/api/products
+========================================
+video 8 : json
+-------------------
+https://www.w3schools.com/js/js_json_intro.asp
+
+>> index.js
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+>> productController.js
+
+ res.status(200).json({tradeName :"hair shampoo", price : 20});
