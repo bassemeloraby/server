@@ -145,3 +145,22 @@ app.use(express.urlencoded({ extended: true }));
 >> productController.js
 
  res.status(200).json({tradeName :"hair shampoo", price : 20});
+
+ ==========================================
+ video 9 : enviroment
+ -------------------------
+ https://www.npmjs.com/package/dotenv
+
+ -create .env file
+
+PORT = 5000
+
+ >> index.js
+
+ import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config();
+ const PORT = process.env.PORT || 5000;
+
+>> .gitignore
