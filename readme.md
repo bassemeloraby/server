@@ -208,3 +208,9 @@ connectDB();
  video 11 : colors
  -------------------------
  https://www.npmjs.com/package/colors
+
+ import colors from 'colors';
+
+
+ .yellow.bold
+ .cyan.underline
