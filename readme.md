@@ -171,14 +171,16 @@ dotenv.config();
  https://account.mongodb.com/account/login
 
 
- -create config folder
- -create db.js file
+https://www.npmjs.com/package/mongoose 
+
 
 >> TERMINAL
  npm i mongoose
 
+ -create config folder
+ -create db.js file
 
->>
+>> db.js
 import mongoose from 'mongoose';
 
 const connectDB = async () => {
@@ -201,3 +203,8 @@ import connectDB from './config/db.js';
 connectDB();
 
 
+
+==========================================
+ video 11 : colors
+ -------------------------
+ https://www.npmjs.com/package/colors
