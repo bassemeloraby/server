@@ -1,5 +1,10 @@
-const createProduct = (req, res) => {
-  res.status(200).json({ tradeName: "hair shampoo", price: 20 });
+import Product from "../models/productModel.js";
+
+const createProduct = async (req, res) => {
+const productData = { ...req.body };
+const product = await Product.create(productData);
+
+  res.status(200).json(product);
 };
 
 export { createProduct };
