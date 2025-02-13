@@ -217,7 +217,7 @@ import colors from 'colors';
 ==========================================
 video 11 : Models
 
----
+----------------------------------------
 
 -create models folder
 -create productModel.js file
@@ -246,3 +246,44 @@ const createProduct = async(req, res) => {
 >> postman
 
 http://localhost:5000/api/products
+
+==========================================
+video 12 : Create
+----------------------------------------
+https://www.npmjs.com/package/express-async-handler
+
+>> terminal
+
+npm i express-async-handler
+
+>> productController.js
+
+import asyncHandler from 'express-async-handler';
+
+asyncHandler()
+
+ if(productData.tradeName){
+    const product = await Product.create(productData);
+    res.status(200).json(product);
+  } else {
+    res.status(400).json({ message: "Trade name is required" });
+  }
+
+==========================================
+video 13 : getProducts
+----------------------------------------
+>> productController.js
+const getProducts = asyncHandler(async (req, res) => {
+    const products = await Product.find()
+    res.status(200).json(products);
+})
+
+>> productRoutes.js
+.getProducts
+
+
+==========================================
+video 14 : getProductById
+----------------------------------------
+>> 
+const product = await Product.findById(req.params.id);
