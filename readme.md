@@ -376,3 +376,19 @@ const updateProduct = asyncHandler(async (req, res) => {
 >> productRoutes.js
 
 .put(updateProduct)
+
+==========================================
+video 17 : morgan
+----------------------------------------
+https://www.npmjs.com/package/morgan
+
+>> terminal 
+
+npm i morgan
+
+>> index.js
+
+import morgan from 'morgan';
+
+app.use(morgan('dev'));
+
